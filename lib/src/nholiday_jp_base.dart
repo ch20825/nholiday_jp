@@ -138,7 +138,12 @@ class NHolidayJp {
       (v) => v.month == month && v.date == date,
     );
 
-    return holiday!.name;
+    if(holiday == null){
+      return 'notHoliday';
+    }
+    else{
+      return holiday.name;
+    }
   }
 
   /// 年[year]月[month]の祝日の一覧を取得
